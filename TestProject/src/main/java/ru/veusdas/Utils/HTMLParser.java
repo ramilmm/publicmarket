@@ -92,7 +92,7 @@ public class HTMLParser {
             url_modified = "http://" + url.toLowerCase();
         }else url_modified = url.toLowerCase();
         try {
-            pub = Jsoup.connect(url_modified).userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64)").header("Accept-Language","ru,en;q=0.8").get();
+            pub = Jsoup.connect(url_modified).userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64)").get();
         } catch (IOException e) {
             System.out.println("cannot connect to site");
         }
