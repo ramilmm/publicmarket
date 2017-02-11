@@ -136,7 +136,7 @@ public class PublicController {
         String href = "";
         switch (_pub.getSocNetwork()){
             case 0: {
-                href = "localhost:8091/vk/" + pub.getId();
+                href = "redirect:/vk/" + pub.getId();
                 break;
             }
             case 1: {

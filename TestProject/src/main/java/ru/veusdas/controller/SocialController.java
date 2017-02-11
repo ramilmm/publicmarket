@@ -38,7 +38,7 @@ public class SocialController {
     private String url = "http://oauth.vk.com/authorize?" +
             "client_id=5802349" +
             "&response_type=code" +
-            "&redirect_uri=http://localhost:8091/callback" +
+            "&redirect_uri=https://publicmarket.herokuapp.com/callback" +
             "&scope=friends,photos,offline,groups,email" +
             "&expires=0";
 
@@ -58,7 +58,7 @@ public class SocialController {
         TransportClient transportClient = HttpTransportClient.getInstance();
         VkApiClient vk = new VkApiClient(transportClient);
         UserAuthResponse authResponse = vk.oauth()
-                .userAuthorizationCodeFlow(5802349, "nslKcULMS0jcOY0ncPke", "http://localhost:8091/callback", code)
+                .userAuthorizationCodeFlow(5802349, "nslKcULMS0jcOY0ncPke", "https://publicmarket.herokuapp.com/callback", code)
                 .execute();
 
         UserActor actor = new UserActor(authResponse.getUserId(), authResponse.getAccessToken());

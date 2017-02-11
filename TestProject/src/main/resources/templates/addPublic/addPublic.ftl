@@ -474,7 +474,7 @@
                             code:$('.generated_code').text()
                         },
                         success: function () {  // успешное завершение работы
-                            $(location).attr('href', 'http://localhost:8091/adverts')
+                            $(location).attr('href', 'https://publicmarket.herokuapp.com/adverts')
                         },
                         error: function () {    // На сервере произошла ошибка
                         }
