@@ -17,10 +17,10 @@ public class HTMLParser {
     private static String BODY_TEXT = "";
     private static Document pub = null;
 
-    public static void main(String[] args) throws IOException {
-        writeFile("https://www.facebook.com/SMMrussia/");
-        getFBData();
-    }
+//    public static void main(String[] args) throws IOException {
+//        writeFile("https://www.facebook.com/SMMrussia/");
+//        getFBData();
+//    }
 
     static public void getFBData() {
 //        Element photo = pub.getElementsByAttributeValue("width","170").first();
@@ -92,7 +92,7 @@ public class HTMLParser {
             url_modified = "http://" + url.toLowerCase();
         }else url_modified = url.toLowerCase();
         try {
-            pub = Jsoup.connect(url_modified).userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64)").get();
+            pub = Jsoup.connect(url_modified).userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64)").header("Accept-Language","ru,en;q=0.8").get();
         } catch (IOException e) {
             System.out.println("cannot connect to site");
         }

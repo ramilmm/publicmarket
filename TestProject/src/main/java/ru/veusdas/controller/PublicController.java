@@ -170,6 +170,7 @@ public class PublicController {
         if (render.size() >= 4) {
             render = render.subList(0,4);
         }
+        model.addAttribute("admin",userServiceImpl.findById(pub.getAdmin().longValue()));
         model.addAttribute("similar",render);
         return "public/publicPage";
     }

@@ -21,6 +21,9 @@
 	<link href="../css/default.css" rel="stylesheet">
 
     <script src="../js/jquery.min.js"></script>
+
+<#--Sweet alert-->
+    <link rel="stylesheet" type="text/css" href="../css/sweetalert.css">
     
 
 </head>
@@ -37,7 +40,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                     <h1><span id="h1_public">PUBLIC</span><span id="h1_market">MARKET</span></h1>
                 </a>
             </div>
@@ -45,15 +48,22 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
               <ul id="topDrop" class="nav navbar-nav">
-                <li><a href="/addPublic">Создать объявление</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Катя Ковалёва <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/profile">Профиль</a></li>
-                        <li><a href="/adverts">Мои объявления</a></li>
-                        <li><a href="/logout">Выйти</a></li>
-                    </ul>
-                </li>
+              <#if user??>
+                  <li><a href="/addPublic">Создать объявление</a></li>
+              <#else >
+                  <li><a href="/login">Создать объявление</a></li>
+              </#if>
+                  <li class="dropdown">
+                  <#if user??>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">${user.name} <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="/profile">Профиль</a></li>
+                          <li><a href="/adverts">Мои объявления</a></li>
+                          <li><a href="/logout">Выйти</a></li>
+                      </ul>
+                  <#else >
+                      <a href="/login">Войти <b class="caret"></b></a>
+                  </#if>
               </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -471,6 +481,29 @@
 	<script src="../js/wow.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="../js/custom.js"></script>
+    <#--Sweet aler-->
+    <script src="../js/sweetalert.min.js"></script>
+
+    <script>
+        $('#btnContactUs').on('click', function() {
+            swal({
+                title: "Напишите продавцу",
+                text:
+                        "Если сомневаетесь в надежности проведения сделки, воспользуйтесь услугами <a href=\"http://veusdas.com/garant\" target=\"_blank\">нашего Гаранта</a>.<br><br>" +
+                        "Контакты продавца: <br>" +
+                        "VK:   <span style=\"color:#e29959\"><a href=\"https://${admin.vk}\" target=\"_blank\">${admin.name}</a><span> <br>"
+                        <#if admin.skype??>
+                            + "Skype:  <span style=\"color:#e29959\">${admin.skype}</span>"
+                        </#if>
+                        <#if admin.fb??>
+                        + "Facebook:  <span style=\"color:#e29959\"><a href=\"${admin.fb}\" target=\"_blank\">${admin.name}</a></span>"
+                        </#if>
+                        ,
+                    html:true
+        });
+        })
+
+    </script>
 
 </body>
 
