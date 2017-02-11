@@ -1,0 +1,253 @@
+.filter {
+    background-color: #eaeaea;
+    border-bottom: 1px solid #67b0d1;
+    padding-bottom: 15px;
+    border-top: 1px solid #67b0d1;
+    padding-top: 10px;
+    position: relative;
+}
+
+.filter input:focus {
+  box-shadow: none !important;
+  border-color: #d1d1d1 !important;
+}
+
+.filter .input-field,
+.filter input.select-dropdown {
+  border-bottom: none;
+  box-sizing: border-box;
+}
+
+.filter-search {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  margin-bottom: 15px;
+}
+
+.filter-search:first-child:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.filter-search:last-child:after,
+.filter-search:last-child:before {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+}
+
+.filter-search:last-child:after {
+  top: 130px;
+}
+
+.filter-search:last-child:before {
+  top: 75px;
+}
+
+.filter-search_list:last-child:before {
+  top: 50px;
+}
+
+.filter-search_list:last-child:after {
+  display: none !important;
+}
+
+.filter-search__input {
+  width: 100%;
+  position: relative;
+}
+
+.filter-search__input input {
+  border-bottom: none !important;
+}
+
+.filter-search .input-field {
+  margin-top: 0;
+}
+
+.filter-search > .input-checkbox {
+  margin-left: 24px;
+}
+
+.filter-search > .input-checkbox label {
+  font-size: 15px;
+  padding-left: 27px;
+}
+
+.filter-search input {
+  margin: 0 !important;
+}
+
+.filter-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 60px;
+}
+
+.filter-group:last-child {
+  margin-right: 0;
+}
+
+.filter-group__wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.filter-group__title {
+  font-weight: 500;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.filter-group__descr {
+  font-size: 15px;
+  color: rgba(63, 63, 63, 0.54);
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.filter-group .input-divider {
+  display: block;
+  margin: 0 5px;
+}
+
+.filter-group input {
+  border: 1px solid #d1d1d1;
+  height: 22px;
+  padding: 6px 7px;
+  margin: 0;
+  border-radius: 2px;
+  width: 108px;
+}
+
+.filter-group input:focus {
+  box-shadow: none !important;
+}
+
+.filter-select__social {
+  width: 200px;
+  position: relative;
+}
+
+.filter-select__social .select-wrapper span.caret {
+  right: 25px;
+}
+
+.filter-select__social:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 1px;
+  height: 27px;
+  background: #e0e0e0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.filter-select__social:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 1px;
+  height: 27px;
+  background: #e0e0e0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.filter-select__type {
+  width: 300px;
+  position: relative;
+}
+
+.filter-select__type .select-wrapper span.caret {
+  right: 25px;
+}
+
+.filter-select__type:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 1px;
+  height: 27px;
+  background: #e0e0e0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.filter__btns {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 15px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter__btns .input-checkbox {
+  display: none;
+}
+
+.filter-reset {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+.filter .btn,
+.filter .btn-large {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 23px;
+  margin-left: 25px;
+}
+ .filter-search_list .filter-search__input {
+    width: 270px;
+    min-width: 270px;
+  }
+
+  .filter-group {
+    margin-right: 15px;
+  }
+
+  .filter-group input {
+    width: 73px;
+  }
+ .filter-search_list .filter-reset {
+    margin-left: 20px;
+  }
